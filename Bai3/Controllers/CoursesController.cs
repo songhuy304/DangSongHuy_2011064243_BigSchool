@@ -15,7 +15,9 @@ namespace Bai3.Controllers
         public CoursesController()
         {
             _dbContext = new ApplicationDbContext();
+
         }
+        [HttpGet]
         public ActionResult Create()
         {
             var viewModel = new CourseViewModel

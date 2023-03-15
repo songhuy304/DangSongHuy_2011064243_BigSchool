@@ -9,7 +9,9 @@ namespace Bai3.ViewModels
 {
     public class CourseViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "Phải có tên")]
+       
+
         public string Place { get; set; }
         [Required]
         [FutureDate]
@@ -22,7 +24,7 @@ namespace Bai3.ViewModels
         public IEnumerable<Category> Categories {  set; get; }  
         public DateTime GetDateTime()
         {
-            return DateTime.Parse(string.Format("{0}{1} ",Date,Time));
+            return DateTime.Parse(string.Format("{0} {1} ",Date,Time));
         }
     }
 }

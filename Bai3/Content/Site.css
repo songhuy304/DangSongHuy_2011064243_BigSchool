@@ -15,23 +15,53 @@
 .dl-horizontal dt {
     white-space: normal;
 }
-
+/*.navbar-inverse .navbar-collapse{
+    background-color :aqua;
+}*/
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
 textarea {
     max-width: 280px;
 }
-.navbar-inverse{
-    background-color : white;
-    color: red;
-    border-bottom : solid 1px #777;
-    box-shadow: inherit;
+
+.navbar-inverse .navbar-collapse, .navbar-inverse a{
+        color:black;
+    }
+
+    .navbar-inverse .navbar-toggle:hover,
+    .navbar-inverse .navbar-toggle:focus {
+        background-color: black;
+        border-color: #fff
+    }
+/*.navbar-inverse .navbar-nav > li > a {
+    color:aliceblue;
+}
+    .navbar-inverse .navbar-brand {
+        color: aliceblue;
+    }*/
+.course{
+    list-style:none;
+}
+.course > li {
+    position: relative;
+    margin-bottom: 30px;
+}
+.course > li .date{
+    text-align: center;
+    background-color : red;
+    color:aliceblue;
+    width : 60px;
+    border-radius:8px;
 
 }
-
-.navbar-inverse .navbar-toggle:hover,
-.navbar-inverse .navbar-toggle:focus {
-    background-color: #777;
-    border-color: #fff
+    .course > li .details{
+        position:absolute;
+        top : 0;
+        left:70px;
+    }
+.navbar-inverse {
+    background-color: #ff2525;
+    border-bottom: solid 1px #777;
+    box-shadow: inherit;
 }

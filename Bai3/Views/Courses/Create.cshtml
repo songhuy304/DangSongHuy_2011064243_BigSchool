@@ -5,13 +5,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <h2>Create</h2>
-
-
-
- 
-<form>
+@using(Html.BeginForm("Create" , "Courses")) { 
     @Html.AntiForgeryToken()
-    <div class=form-group">
+    <div class="form-group">
         @Html.LabelFor(m => m.Place)
         @Html.TextBoxFor(m => m.Place, new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.Place)
@@ -28,15 +24,13 @@
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Category)
-        @Html.DropDownListFor(m => m.Category, new SelectList(Model.Categories, "ID", "Name"), "", new { @class = "form-control" })
+        @Html.DropDownListFor(m => m.Category, new SelectList(Model.Categories, "ID", "Name"), "--Chọn--", new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.Category)
     </div>
     <button type="submit" value="Save" class="btn btn-primary">Save </button>
-    <div class="form-group">
+   
 
-    </div>
-</form> 
-
+}
 @section scripts
   {
     @Scripts.Render("~/bundles/jqueryval");
