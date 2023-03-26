@@ -21,7 +21,10 @@ namespace Bai3.ViewModels
         public string Time {  set; get; }
         [Required]
         public byte Category {   get; set; }    
-        public IEnumerable<Category> Categories {  set; get; }  
+        public IEnumerable<Category> Categories {  set; get; }
+        public IEnumerable<Course> UpcommingCourses { set; get; }
+        public bool ShowAction { get; set; }
+
         public DateTime GetDateTime()
         {
             return DateTime.Parse(string.Format("{0} {1} ",Date,Time));

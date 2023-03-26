@@ -21,7 +21,13 @@ namespace Bai3.Controllers
             var um = _dbContext.Courses.Include(c => c.Lecturer)
                 .Include(c => c.Category)
                 .Where(c => c.DateTime > DateTime.Now);
-            return View(um);    
+
+            var viewModel = new CourseViewModel
+            {
+                UpcommingCourses = um,
+                ShowAction = User.Identity.IsAuthenticated
+            };
+            return View(viewModel);    
 
         }
 

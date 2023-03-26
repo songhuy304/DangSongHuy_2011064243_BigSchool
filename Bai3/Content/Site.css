@@ -49,7 +49,7 @@ textarea {
 }
 .course > li .date{
     text-align: center;
-    background-color : red;
+    background-color : saddlebrown;
     color:aliceblue;
     width : 60px;
     border-radius:8px;
@@ -61,7 +61,7 @@ textarea {
         left:70px;
     }
 .navbar-inverse {
-    background-color: #ff2525;
+    background-color: slateblue;
     border-bottom: solid 1px #777;
     box-shadow: inherit;
 }
